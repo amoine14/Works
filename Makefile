@@ -9,7 +9,7 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS) $(HEADER)
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
