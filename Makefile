@@ -3,16 +3,16 @@ NAME = libft.a
 CC = cc
 FLAGS = -Wall -Werror -Wextra
 SRCS = $(wildcard *.c)
-OBJS = $(SRCS: .c=.o)
+OBJS = $(SRCS:.c=.o)
 HEADER = libft.h
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(objs)
+	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(FLAGS) -c %< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
