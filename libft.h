@@ -6,7 +6,7 @@
 /*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/19 11:33:05 by username         #+#    #+#              */
-/*   Updated: 2026/10/19 13:41:47 by username        ###   ########.fr        */
+/*   Updated: 2026/10/19 13:49:07 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strlen(char *str);
+//
 void	ft_strlcat(char *dest, const char *src, size_t size);
 void	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strrchr(const char *s, int c);
