@@ -6,11 +6,13 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 09:28:32 by username          #+#    #+#             */
-/*   Updated: 2026/10/20 09:50:28 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/20 13:24:13 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+
+#include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
