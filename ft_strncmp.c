@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 12:08:25 by username          #+#    #+#             */
-/*   Updated: 2026/10/20 12:15:24 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/20 12:22:42 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int	main(void)
 // {
-// 	char	*s1 = "Bonjour";
-// 	char	*s2 = "BonjwqouR";
+// 	char	*s1 = "Bonj";
+// 	char	*s2 = "BonjA";
 // 	size_t	n = 7;
 // 	int		ret_ft;
 // 	int		ret_original;
