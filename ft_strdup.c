@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 10:03:38 by username          #+#    #+#             */
-/*   Updated: 2026/10/21 10:40:56 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/21 11:59:06 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	while (s[len])
 		len++;
-	str = malloc(sizeof(char)*len + 1);
+	str = malloc(sizeof(char) * (len) + 1);
 	while (i < len)
 	{
 		str[i] = s[i];

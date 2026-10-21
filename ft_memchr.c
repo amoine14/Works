@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:49:57 by username          #+#    #+#             */
-/*   Updated: 2026/10/20 15:22:04 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/21 11:57:33 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,27 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (NULL);
 }
 
-int	main(int argc, char **argv)
-{
-	void	*result_ft;
-	void	*result_std;
-	size_t	n;
-	int		c;
+// int	main(int argc, char **argv)
+// {
+// 	void	*result_ft;
+// 	void	*result_std;
+// 	size_t	n;
+// 	int		c;
 
-	if (argc != 4)
-	{
-		printf("Usage : ./a.out chaine caractere n\n");
-		return (1);
-	}
-	c = (unsigned char) argv[2][0];
-	n = (size_t) atoi(argv[3]);
-	if (n > strlen(argv[1]) + 1)
-		return (1);
-	result_ft = ft_memchr(argv[1], c, n);
-	result_std = memchr(argv[1], c, n);
-	printf("ft_memchr : %p\n", result_ft);
-	printf("memchr    : %p\n", result_std);
-	if (result_ft)
-		printf("Caractere trouve : %c\n", *(char *) result_ft);
-	return (0);
-}
+// 	if (argc != 4)
+// 	{
+// 		printf("Usage : ./a.out chaine caractere n\n");
+// 		return (1);
+// 	}
+// 	c = (unsigned char) argv[2][0];
+// 	n = (size_t) atoi(argv[3]);
+// 	if (n > strlen(argv[1]) + 1)
+// 		return (1);
+// 	result_ft = ft_memchr(argv[1], c, n);
+// 	result_std = memchr(argv[1], c, n);
+// 	printf("ft_memchr : %p\n", result_ft);
+// 	printf("memchr    : %p\n", result_std);
+// 	if (result_ft)
+// 		printf("Caractere trouve : %c\n", *(char *) result_ft);
+// 	return (0);
+// }
