@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 09:52:14 by username          #+#    #+#             */
-/*   Updated: 2026/10/20 15:25:38 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/21 15:14:28 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int	main(int argc, char **argv)
-{
-	char	*str;
-	size_t	n;
+// int	main(int argc, char **argv)
+// {
+// 	char	*str;
+// 	size_t	n;
 
-	argc = argc;
-	str = argv[1];
-	n = 3;
-	printf("AVANT | %s\n", str);
-	ft_memmove(str + 2, str, n);
-	printf("APRES | %s\n", str);
-	return (0);
-}
+// 	argc = argc;
+// 	str = argv[1];
+// 	n = 3;
+// 	printf("AVANT | %s\n", str);
+// 	ft_memmove(str + 2, str, n);
+// 	printf("APRES | %s\n", str);
+// 	return (0);
+// }
