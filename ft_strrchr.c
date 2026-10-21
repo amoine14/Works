@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 16:47:41 by username          #+#    #+#             */
-/*   Updated: 2026/10/20 16:54:40 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/21 16:37:58 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	while (i > 0 && s[i] != c)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
+		if (s[i] == c)
+			return ((void *) & s[i]);
 		i--;
 	}
-	if (s[i] == c)
-		return ((void *) & s[i]);
 	return (NULL);
 }
 
