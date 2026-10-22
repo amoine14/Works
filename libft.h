@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 11:33:05 by username          #+#    #+#             */
-/*   Updated: 2026/10/21 15:55:00 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/22 15:31:15 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdio.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
