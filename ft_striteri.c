@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 08:57:45 by username          #+#    #+#             */
-/*   Updated: 2026/10/23 08:58:07 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/23 11:53:44 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 // 	printf("Test 1 : [%s]\n", s1);
 // 	printf("Test 2 : [%s]\n", s2);
 // 	printf("Test 3 : [%s]\n", s3);
-// 	printf("Test 4 : [%s]\n", s4);
+// 	printf("Test 4 : [%s]\n",
+s4);
 // 	return (0);
 // }
