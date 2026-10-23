@@ -6,9 +6,11 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 13:24:01 by username          #+#    #+#             */
-/*   Updated: 2026/10/23 13:44:42 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/23 16:47:30 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -21,6 +23,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
+	tmp = *lst;
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = new;
