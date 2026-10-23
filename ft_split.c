@@ -6,12 +6,10 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 14:55:22 by username          #+#    #+#             */
-/*   Updated: 2026/10/21 15:14:07 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/23 23:14:26 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	count_words(const char *str, char cara)
@@ -42,6 +40,24 @@ static char	**free_split(char **tab, size_t count)
 	return (NULL);
 }
 
+static char	*copy_word(const char *str, size_t len)
+{
+	char	*word;
+	size_t	i;
+
+	word = malloc(len + 1);
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word[i] = str[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
 static char	**fill_words(char **tab, const char *str, char c)
 {
 	size_t	len;
@@ -57,7 +73,7 @@ static char	**fill_words(char **tab, const char *str, char c)
 		len = 0;
 		while (str[len] && str[len] != c)
 			len++;
-		tab[i] = ft_substr(str, 0, len);
+		tab[i] = copy_word(str, len);
 		if (!tab[i])
 			return (free_split(tab, i));
 		i++;
@@ -78,27 +94,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (fill_words(tab, s, c));
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	char	**tab;
-// 	size_t	i;
-
-// 	argc = argc;
-// 	tab = ft_split(argv[1], ':');
-// 	if (!tab)
-// 	{
-// 		printf("Erreur d'allocation\n");
-// 		return (1);
-// 	}
-// 	i = 0;
-// 	while (tab[i])
-// 	{
-// 		printf("tab[%zu] = \"%s\"\n", i, tab[i]);
-// 		free(tab[i]);
-// 		i++;
-// 	}
-// 	printf("tab[%zu] = NULL\n", i);
-// 	free(tab);
-// 	return (0);
-// }

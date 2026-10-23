@@ -6,85 +6,49 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 15:51:19 by username          #+#    #+#             */
-/*   Updated: 2026/10/23 18:00:46 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/23 21:20:24 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_dec(int n)
+static size_t	count_len(int n)
 {
-	int	count;
+	size_t	len;
 
-	count = 1;
+	len = 1;
+	if (n < 0)
+		len++;
 	while (n / 10 != 0)
 	{
-		count++;
 		n /= 10;
+		len++;
 	}
-	return (count);
-}
-
-static char	*convert(int n, int count)
-{
-	char	*str;
-	int		end;
-
-	end = count;
-	str = malloc(sizeof(int) * (count) + 1);
-	if (str == NULL)
-		return (NULL);
-	count--;
-	while (count >= 0)
-	{
-		str[count] = (n % 10) + 48;
-		printf("Cara = %c\n", str[count]);
-		n /= 10;
-		count--;
-	}
-	str[end] = '\0';
-	return (str);
-}
-
-static char	*convertn(int n, int count)
-{
-	char	*str;
-	int		end;
-
-	end = count + 1;
-	n *= -1;
-	str = malloc(sizeof(int) * (count) + 2);
-	if (str == NULL)
-		return (NULL);
-	while (count > 0)
-	{
-		str[count] = (n % 10) + 48;
-		printf("Cara = %c\n", str[count]);
-		n /= 10;
-		count--;
-	}
-	str[0] = '-';
-	str[end] = '\0';
-	return (str);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		count;
+	size_t	len;
+	int		digit;
 
-	count = count_dec(n);
+	len = count_len(n);
+	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
 	if (n < 0)
-		str = convertn(n, count);
-	else
-		str = convert(n, count);
-	printf("Final = %s\n", str);
+		str[0] = '-';
+	while (1)
+	{
+		digit = n % 10;
+		if (digit < 0)
+			digit = -digit;
+		str[--len] = digit + '0';
+		n /= 10;
+		if (n == 0)
+			break ;
+	}
 	return (str);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	argc = argc;
-// 	ft_itoa(ft_atoi(argv[1]));
-// 	return (0);
-// }

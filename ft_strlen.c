@@ -6,11 +6,13 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 13:46:59 by username          #+#    #+#             */
-/*   Updated: 2026/10/21 11:55:39 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/23 23:08:15 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

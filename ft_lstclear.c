@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 14:45:20 by username          #+#    #+#             */
-/*   Updated: 2026/10/23 15:37:52 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/23 23:17:36 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
-// int	main(void)
-// {
-// 	t_list	*lst;
-
-// 	lst = NULL;
-// 	ft_lstclear(&lst, free);
-// 	printf("Liste vide : %p (attendu : NULL)\n", (void *) lst);
-// 	lst = ft_lstnew(ft_strdup("A"));
-// 	ft_lstclear(&lst, free);
-// 	printf("1 maillon  : %p (attendu : NULL)\n", (void *) lst);
-// 	lst = ft_lstnew(ft_strdup("A"));
-// 	ft_lstadd_front(&lst, ft_lstnew(ft_strdup("B")));
-// 	ft_lstadd_front(&lst, ft_lstnew(ft_strdup("C")));
-// 	printf("Avant clear : %d maillons\n", ft_lstsize(lst));
-// 	ft_lstclear(&lst, free);
-// 	printf("Après clear : %d maillons\n", ft_lstsize(lst));
-// 	printf("lst après clear : %p (attendu : NULL)\n", (void *) lst);
-// 	return (0);
-// }
