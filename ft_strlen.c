@@ -6,7 +6,7 @@
 /*   By: amoine <amoine@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 13:46:59 by username          #+#    #+#             */
-/*   Updated: 2026/10/23 23:08:15 by amoine           ###   ########.fr       */
+/*   Updated: 2026/10/23 23:24:36 by amoine           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
